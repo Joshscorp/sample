@@ -7,6 +7,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: development
+      MYSQL_DATABASE: devDb
   dummyserver:
     image: test/dummyserver:latest
     ports:
