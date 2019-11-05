@@ -39,6 +39,12 @@ stop () {
     docker-compose stop
 }
 
+# Destroy compose
+destroy () {
+    echo "Stopping dummyserver container $imageName"
+    docker-compose down
+}
+
 updateHostName () {
     echo "Adding to hostname"
     echo "127.0.0.1 dummyserver.local" >> /etc/hosts
@@ -68,6 +74,7 @@ if [ $# -eq 0 ]; then
 else
   case "$1" in
     "cleanup")
+            destroy
             killContainers
             removeImage
             ;;
