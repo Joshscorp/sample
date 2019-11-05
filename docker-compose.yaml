@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  dummyserver:
+    image: test/dummyserver:latest
+    ports:
+      - "8080:3000"
