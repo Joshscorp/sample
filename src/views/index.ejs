@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Test App</title>
+
+    </head>
+    <body>
+        <div>
+            <h2>A Sample Test Application</h2>
+
+            <form action="/add" method="POST">
+                <input type="text" name="newitem" placeholder="Add New Item">
+                <button>Add Item</button>
+            </form>
+
+            <h2>Items</h2>
+            <% for( var i = 0; i < items.length; i++){ %>
+                <li><%= items[i] %></li>
+            <% } %>
+        </div>
+    </body>
+</html>
