@@ -1,6 +1,12 @@
 version: '2'
 
 services:
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: development
   dummyserver:
     image: test/dummyserver:latest
     ports:
