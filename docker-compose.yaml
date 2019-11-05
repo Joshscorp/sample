@@ -6,8 +6,8 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: development
-      MYSQL_DATABASE: devDb
+      MYSQL_ROOT_PASSWORD: "superPassword_"
+      MYSQL_DATABASE: "devDb"
   dummyserver:
     image: test/dummyserver:latest
     ports:
